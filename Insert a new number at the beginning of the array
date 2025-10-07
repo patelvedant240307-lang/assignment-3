@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+int i,arr[11],newnum;
+printf("enter 10 elements_\n");
+for(i=1;i<=10;i++)
+    {
+     scanf("%d",&arr[i]);
+    }
+printf("enter the new number to insert at the beginning=");
+scanf("%d", &newnum);
+arr[0] = newnum;
+printf("updated array=\n");
+for(i=0;i<=10;i++)
+    {
+     printf("%d",arr[i]);
+    }
+return 0;
+}
