@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+int arr[11],i,pos,newnum;
+printf("enter 10 values-\n");
+for(i=0;i<10;i++)
+     {
+      scanf("%d",&arr[i]);
+     }
+printf("enter position (0 to 10) for insert new number-");
+scanf("%d",&pos);
+printf("enter new number=");
+scanf("%d",&newnum);
+for(i=10;i>pos;i--)
+    {
+      arr[i] = arr[i - 1];
+    }
+arr[pos]=newnum;
+printf("updated array=\n");
+for(i=0;i<11;i++)
+    {
+     printf("%d ", arr[i]);
+    }
+return 0;
+}
