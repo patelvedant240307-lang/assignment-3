@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+int i,j,arr[10],freq[10];
+printf("enter 10 values:\n");
+for(i=0;i<10;i++) {
+scanf("%d",&arr[i]);
+    freq[i]=-1;
+    }
+for(i=0;i<10;i++) {
+    int count =1;
+    if(freq[i] !=0)
+     {
+      for(j=i+1;j<10;j++)
+       {
+      if(arr[i]==arr[j])
+        {
+count++;
+freq[j]=0;
+        }
+       }
+freq[i] = count;
+     }
+    }
+printf("frequency of every number=\n");
+for(i=0;i<10;i++) {
+    if(freq[i]!=0)
+    {
+printf("%d occurs %d times\n",arr[i],freq[i]);
+    }
+}
+return 0;
+}
