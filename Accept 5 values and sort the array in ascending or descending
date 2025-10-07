@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main() {
+int arr[5],i,j,choice,temp;
+printf("enter 5 values:\n");
+  for(i =0;i<5;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+printf("\nenter 1 for ascending, 2 for descending: ");
+scanf("%d",&choice);
+    for(i =0;i<5-1;i++)
+      {
+    for(j = 0;j< 5-1-i;j++)
+        {
+    if((choice == 1 && arr[j] >arr[j+1]) ||
+        (choice == 2 && arr[j] <arr[j+1]))
+         {
+         temp =arr[j];
+         arr[j] =arr[j+1];
+         arr[j+1] =temp;
+         }
+        }
+      }
+if(choice ==1)
+     printf("\narray in ascending Order=");
+else
+     printf("\narray in descending Order=");
+for(i =0;i<5;i++)
+    {
+printf("%d ",arr[i]);
+    }
+return 0;
+}
